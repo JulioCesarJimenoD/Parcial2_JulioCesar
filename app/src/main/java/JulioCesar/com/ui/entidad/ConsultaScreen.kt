@@ -9,11 +9,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.ViewModel
 import androidx.navigation.NavHostController
 
 @Composable
-fun ConsultaScreen(navHostController: NavHostController, viewModel: EnitdadViewModel = hiltViewModel()){
+fun ConsultaScreen(navHostController: NavHostController, viewModel: EntidadViewModel = hiltViewModel()){
 
 
     Column(modifier = Modifier.fillMaxSize()) {

@@ -5,7 +5,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class EnitdadViewModel @Inject constructor(
+class EntidadViewModel @Inject constructor(
     //val entidadRepository: EntidadRepositorio
 ) : ViewModel(){
 //    var entites = entidadRepository.getList()
