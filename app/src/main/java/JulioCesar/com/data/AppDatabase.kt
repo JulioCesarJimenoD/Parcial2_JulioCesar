@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 @Database(
     entities = [entity::class],
     exportSchema = false,
-    version = 1
+    version = 2
 )
 abstract class AppDatabase : RoomDatabase(){
     //Los Daos van aqui!!
