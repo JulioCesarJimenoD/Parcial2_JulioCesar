@@ -1,6 +1,6 @@
 package JulioCesar.com.di
 
-import JulioCesar.com.data.AppDatabase
+import JulioCesar.com.data.ArticuloDatabase
 import android.content.Context
 import androidx.room.Room
 import dagger.Module
@@ -16,10 +16,10 @@ object AppModule {
     @Singleton
     @Provides
 
-    fun provideDatabase(@ApplicationContext context: Context) : AppDatabase{
+    fun provideDatabase(@ApplicationContext context: Context) : ArticuloDatabase{
         return Room.databaseBuilder(
             context,
-            AppDatabase::class.java,"ParcialDb.db"
+            ArticuloDatabase::class.java,"Articulos.db"
         ).fallbackToDestructiveMigration()
             .build()
     }
