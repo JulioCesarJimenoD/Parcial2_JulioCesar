@@ -1,4 +1,4 @@
-package JulioCesar.com.ui.entidad
+package JulioCesar.com.ui.articuloScreen
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,7 +12,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 
 @Composable
-fun ConsultaScreen(navHostController: NavHostController, viewModel: EntidadViewModel = hiltViewModel()){
+fun ConsultaScreen(navHostController: NavHostController, viewModel: ArticuloViewModel = hiltViewModel()){
 
 
     Column(modifier = Modifier.fillMaxSize()) {

@@ -1,4 +1,4 @@
-package JulioCesar.com.data.Articulos
+package JulioCesar.com.data.articulos
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

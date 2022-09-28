@@ -1,4 +1,4 @@
-package JulioCesar.com.ui.entidad
+package JulioCesar.com.ui.articuloScreen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,7 +15,7 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun EntidadScreen(navHostController: NavHostController,
-                  viewModel: EntidadViewModel = hiltViewModel()
+                  viewModel: ArticuloViewModel = hiltViewModel()
 ){
         Column(modifier = Modifier.fillMaxSize()) {
             Scaffold(

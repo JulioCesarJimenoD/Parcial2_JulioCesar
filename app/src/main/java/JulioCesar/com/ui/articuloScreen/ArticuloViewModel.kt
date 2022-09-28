@@ -1,11 +1,11 @@
-package JulioCesar.com.ui.entidad
+package JulioCesar.com.ui.articuloScreen
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class EntidadViewModel @Inject constructor(
+class ArticuloViewModel @Inject constructor(
     //val entidadRepository: EntidadRepositorio
 ) : ViewModel(){
 //    var entites = entidadRepository.getList()

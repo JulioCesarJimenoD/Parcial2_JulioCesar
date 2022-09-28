@@ -1,7 +1,7 @@
 package JulioCesar.com
 
-import JulioCesar.com.ui.entidad.ConsultaScreen
-import JulioCesar.com.ui.entidad.EntidadScreen
+import JulioCesar.com.ui.articuloScreen.ConsultaScreen
+import JulioCesar.com.ui.articuloScreen.EntidadScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

@@ -1,6 +1,6 @@
 package JulioCesar.com.data.dao
 
-import JulioCesar.com.data.Articulos.Articulo
+import JulioCesar.com.data.articulos.Articulo
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
