@@ -1,10 +1,10 @@
-package JulioCesar.com.data.entities
+package JulioCesar.com.data.Articulos
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Entidad")
-data class entity(
+data class articulo(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val valor1: String,
