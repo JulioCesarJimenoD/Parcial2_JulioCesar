@@ -1,5 +1,7 @@
 package JulioCesar.com
 
+import JulioCesar.com.ui.entidad.ConsultaScreen
+import JulioCesar.com.ui.entidad.EntidadScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -11,6 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import JulioCesar.com.ui.theme.Pacial1_JulioTheme
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +27,15 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    val navController = rememberNavController()
+                    NavHost(navController = navController, startDestination = "ConsultaEntityScreen") {
+                        composable(route = "ConsultaEntityScreen") {
+                            ConsultaScreen(navHostController = navController)
+                        }
+                        composable(route = "EntityScreen") {
+                            EntidadScreen(navHostController = navController)
+                        }
+                    }
                 }
             }
         }
