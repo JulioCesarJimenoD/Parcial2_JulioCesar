@@ -3,8 +3,8 @@ package JulioCesar.com.data.Articulos
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Articulo")
-data class articulo(
+@Entity(tableName = "Articulos")
+data class Articulo(
     @PrimaryKey(autoGenerate = true)
     val articuloId: Int,
     val descripcion: String,
