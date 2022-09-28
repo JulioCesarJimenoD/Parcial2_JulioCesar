@@ -11,6 +11,6 @@ class ArticuloRepository @Inject constructor(
 ){
     suspend fun Insertar( articulo: Articulo) = articulosDao.Insertar(articulo)
 
-    fun Lista(): Flow<List<Articulo>> = articulosDao.getList()
+    fun getList(): Flow<List<Articulo>> = articulosDao.getList()
 }
 
