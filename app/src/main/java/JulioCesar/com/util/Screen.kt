@@ -3,6 +3,6 @@ package JulioCesar.com.util
 
 sealed class Screen(val route: String){
 
-    object RegistroArticuloScreen: Screen("RegistroScreen")
-    object ConsultaArticuloScreen: Screen("ListadoScreen")
+    object RegistroArticuloScreen: Screen("RegistroArticuloScreen")
+    object ConsultaArticuloScreen: Screen("ConsultaArticuloScreen")
 }
