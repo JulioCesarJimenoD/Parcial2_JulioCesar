@@ -1,7 +1,8 @@
 package JulioCesar.com
 
-import JulioCesar.com.ui.articuloScreen.ConsultaScreen
-import JulioCesar.com.ui.articuloScreen.EntidadScreen
+
+import JulioCesar.com.ui.articuloScreen.ConsutaArticuloScreen
+import JulioCesar.com.ui.articuloScreen.RegistroArticuloScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -13,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import JulioCesar.com.ui.theme.Pacial1_JulioTheme
+import JulioCesar.com.util.Screen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -27,30 +29,26 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    val navController = rememberNavController()
-                    NavHost(navController = navController, startDestination = "ConsultaEntityScreen") {
-                        composable(route = "ConsultaEntityScreen") {
-                            ConsultaScreen(navHostController = navController)
-                        }
-                        composable(route = "EntityScreen") {
-                            EntidadScreen(navHostController = navController)
-                        }
-                    }
+                    MyApp()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
 
-@Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
-    Pacial1_JulioTheme {
-        Greeting("Android")
+fun MyApp() {
+    val navHostController = rememberNavController()
+    NavHost(navController = navHostController,
+        startDestination = Screen.ConsultaArticuloScreen.route){
+
+        composable(route = Screen.ConsultaArticuloScreen.route){
+            ConsutaArticuloScreen(goToRegistro = {navHostController.navigate(Screen.RegistroArticuloScreen.route)})
+        }
+
+        composable(route = Screen.RegistroArticuloScreen.route){
+            RegistroArticuloScreen(backToListado = {navHostController.navigate(Screen.ConsultaArticuloScreen.route)})
+        }
     }
 }
