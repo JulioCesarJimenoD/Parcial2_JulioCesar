@@ -17,8 +17,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 
 @Composable
-fun RegistroArticuloScreen (backToListado:() -> Unit,
-                            viewModel: ArticuloViewModel = hiltViewModel()){
+fun RegistroArticuloScreen (backToConsulta:() -> Unit,
+                            viewModel: ArticuloViewModel = hiltViewModel(),
+                            articuloId: Int = 0){
     val ScaffoldState = rememberScaffoldState()
 
     var validarMarca by remember{ mutableStateOf(false) }
@@ -62,7 +63,7 @@ fun RegistroArticuloScreen (backToListado:() -> Unit,
                         if(viewModel.existencias.isDigitsOnly() && viewModel.existencias.toDouble() > 0.0){
                             viewModel.Guardar()
                             Toast.makeText(context, "Guardado", Toast.LENGTH_SHORT).show()
-                            backToListado()
+                            backToConsulta()
                         }else{
                             Toast.makeText(context, "El sueldo debe de ser mayor a 0", Toast.LENGTH_SHORT).show()
                         }

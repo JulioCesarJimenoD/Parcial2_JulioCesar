@@ -19,7 +19,6 @@ class ArticuloViewModel @Inject constructor(
     var marca by mutableStateOf("")
     var descripcion by mutableStateOf("")
     var existencias by mutableStateOf("")
-
     var articulo = articuloRepository.getList()
         private set
 

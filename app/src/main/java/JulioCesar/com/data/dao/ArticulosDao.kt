@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.Flow
 interface ArticulosDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-
     suspend fun Insertar(articulo: Articulo)
 
     @Delete
