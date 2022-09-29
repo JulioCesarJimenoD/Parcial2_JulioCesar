@@ -28,9 +28,9 @@ class ArticuloViewModel @Inject constructor(
             articuloRepository.Insertar(
                 Articulo(
                     articuloId = 0,
-                    descripcion = "",
-                    marca = "",
-                    existencias = 0.0
+                    descripcion = descripcion,
+                    marca = marca,
+                    existencias = existencias.toDouble()
             )
             )
         }

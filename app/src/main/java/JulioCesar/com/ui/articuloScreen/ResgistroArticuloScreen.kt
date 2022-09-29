@@ -93,18 +93,18 @@ fun RegistroArticuloScreen (backToConsulta:() -> Unit,
             TextField(
                 value = viewModel.descripcion,
                 onValueChange = {viewModel.descripcion = it} ,
-                label = { Text(text = "descripcion")},
+                label = { Text(text = "Descripcion")},
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
      //           leadingIcon = { Icon(imageVector = Icons.Default.Streetview, contentDescription ="") }
 
             )
-            TextField(
-                value = viewModel.existencias,
-                onValueChange = {viewModel.existencias = it},
-            label = { Text(text = "existencias")},
-            modifier = Modifier.fillMaxWidth())
+//            TextField(
+//                value = viewModel.existencias,
+//                onValueChange = {viewModel.existencias = it},
+//            label = { Text(text = "existencias")},
+//            modifier = Modifier.fillMaxWidth())
 
 
             TextField(
