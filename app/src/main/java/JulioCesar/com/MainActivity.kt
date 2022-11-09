@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import JulioCesar.com.ui.theme.Parcial2_JulioCesarTheme
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -19,6 +20,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
@@ -66,6 +68,14 @@ fun verbosCard(
     ) {
         Column(modifier.padding(16.dp)) {
 
+            AsyncImage(
+                model = verbo.Imagen,
+                contentDescription = null,
+                modifier
+                    .size(100.dp)
+                    .clip(CircleShape)
+            )
+
             Spacer(modifier = modifier.padding(4.dp))
             Text(text = "Verbo: " + verbo.Verbo)
             Spacer(modifier = modifier.padding(4.dp))
@@ -74,15 +84,17 @@ fun verbosCard(
             Text(text = "Categoria: " + verbo.Categoria)
             Spacer(modifier = modifier.padding(4.dp))
 
-            AsyncImage(
-                model = verbo.Imagen,
-                contentDescription = null,
-                modifier
-
-                    .fillMaxWidth()
-                    .padding(5.dp)
-
-            )
+//            AsyncImage(
+//                model = verbo.Imagen,
+//                contentDescription = null,
+//                modifier
+//                    .size(100.dp)
+//                    .clip(CircleShape)
+//                    .border(2.dp, Color.DarkGray,
+//                        RoundedCornerShape(10.dp))
+//
+//
+//            )
         }
     }
 }
