@@ -1,8 +1,9 @@
-package JulioCesar.com
+package UmbreCode.com
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class ParcialApp : Application() {
+
+class ArticuloApiApp : Application() {
 }
